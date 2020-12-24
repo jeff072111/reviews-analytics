@@ -20,3 +20,15 @@ for d in data:
 print('總共有', len(new), '個留言字母小於100')
 print(new[0])
 
+good = []
+for d in data:
+	if 'good' in d:
+		good.append(d)
+print('總共有', len(good), '筆留言裡面有Good')
+print(good[0])
+
+#清單快寫法
+good = [d for d in data if 'good' in d]
+print(len(good))
+bad = ['bad' in d for d in data]
+print(bad[0])
